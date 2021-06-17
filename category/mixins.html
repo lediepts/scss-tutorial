@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NESTING</title>
+  <link rel="stylesheet" href="../styles/css/mixins.css">
+</head>
+
+<body class="dark">
+  <a href="/">
+    BACK TO HOME
+  </a>
+  <div class="learn">
+    <div class="toggle"><button onclick="toggle()">Toggle</button></div>
+    <div class="news">
+      <div class="news__title">
+        <h2>News Title</h2>
+      </div>
+      <div class="news__contents">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo nesciunt itaque voluptate accusantium dolore
+          ex perferendis, quia quo impedit at corrupti culpa unde consectetur! Alias cupiditate nam autem aperiam
+          aliquid!
+          Harum animi aut iure perspiciatis beatae consequatur impedit voluptate laborum velit quo repellendus
+          doloremque excepturi, mollitia, molestiae ab tempora voluptatem doloribus eum cum maiores. Pariatur modi unde
+          hic maxime est?
+          Deleniti, optio! Exercitationem, similique. Sit, animi neque. Cum, minus delectus hic, voluptatibus dolorem
+          magnam eum id dolores voluptatem blanditiis ut expedita unde pariatur quisquam fuga inventore, voluptate natus
+          exercitationem asperiores.
+          Hic temporibus alias, recusandae adipisci aliquid natus culpa! Fuga molestiae aliquid illum quae, labore rem
+          Quam tempora autem alias praesentium.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus voluptas adipisci, voluptates
+          facilis laboriosam aliquam vel et! Facilis iure est cumque consequatur laboriosam eaque vitae a ea
+          exercitationem ducimus.
+          Nostrum, iusto? Similique quisquam quaerat illum quam consectetur atque fuga sequi eius nostrum nihil a
+          dolorum fugiat officia, et corrupti, animi inventore ab libero accusamus voluptas molestias nobis labore
+          mollitia?
+          Deserunt blanditiis obcaecati tempora totam, quisquam ex distinctio iusto sit tenetur id sunt possimus libero
+          aliquid neque repudiandae recusandae nobis, itaque, in expedita asperiores unde. Quaerat modi hic itaque
+          reiciendis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum explicabo ullam illo nobis dicta
+          sequi, blanditiis vel provident porro consequuntur mollitia. Quia corrupti voluptate incidunt aut eaque ad
+          sed!
+          Perferendis odio quidem neque nesciunt itaque temporibus expedita facilis natus voluptatum, quia enim
+          blanditiis iste aspernatur repudiandae non voluptatibus officia. Modi illo dicta fuga accusantium nihil quo
+          eos, minus natus!</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    function toggle() {
+      const body = document.querySelector("body")
+      const toggle_btn = document.querySelector(".toggle>button")
+      body.classList.toggle("dark")
+      toggle_btn.innerHTML = `Class of body is ${body.classList.length ? body.classList : "none"}`
+    }
+  </script>
+</body>
+
+</html>

@@ -1,7 +1,10 @@
 @import "constant";
 @import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&amp;display=swap");
 * {
   margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   padding: 0;
   content: "";
   font-family: "Noto Serif JP", sans-serif;
@@ -41,3 +44,21 @@ main {
   flex-direction: column;
 }
 @import "theme";
+
+a {
+  color: $color-warning;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin: 1rem;
+  &:hover {
+    color: #3cad57;
+  }
+}
+.learn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}

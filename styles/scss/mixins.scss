@@ -1,0 +1,40 @@
+@import "global";
+
+$light-background: #f2ece4;
+$light-text: #036;
+$dark-background: #a0a0a0;
+$dark-text: #d2e1dd;
+
+@mixin theme-colors($font-size) {
+  background-color: $light-background;
+  color: $light-text;
+  body.dark & {
+    background-color: $dark-background;
+    color: $dark-text;
+    font-size: $font-size;
+  }
+}
+.news {
+  padding: 0 2rem;
+  @include theme-colors(2rem);
+  &__title {
+    margin: 1rem 0;
+  }
+  &__contents {
+    text-indent: 2rem;
+    & > p {
+      &:last-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.toggle {
+  padding: 3rem;
+  & > button {
+    min-width: 300px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+}

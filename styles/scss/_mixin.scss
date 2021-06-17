@@ -9,13 +9,3 @@
     @content;
   }
 }
-
-@mixin theme-colors($color) {
-  background-color: $light-background;
-  color: $color;
-  body.dark & {
-    background-color: $dark-background;
-    // color: $dark-text;
-    color: invert($color);
-  }
-}

@@ -1,0 +1,54 @@
+@import "global";
+
+@mixin btn-type($color) {
+  border: 1px solid $color;
+  color: $color;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  &::after {
+    content: "";
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $color;
+    transition: all 0.3s linear;
+  }
+  &:hover {
+    transition: all 0.1s linear;
+    transition-delay: 0.2s;
+    color: invert($color);
+    background: $color;
+    box-shadow: 0 2px 4px rgba($color, $alpha: 0.4);
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.btn {
+  min-width: 200px;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  @include btn-type($color-black);
+  &--success {
+    @extend .btn;
+    @include btn-type($color-success);
+  }
+  &--info {
+    @extend .btn;
+    @include btn-type($color-info);
+  }
+  &--warning {
+    @extend .btn;
+    @include btn-type($color-warning);
+  }
+  &--error {
+    @extend .btn;
+    @include btn-type($color-error);
+  }
+}

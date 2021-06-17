@@ -7,6 +7,6 @@
   "license": "MIT",
   "private": "true",
   "scripts": {
-    "dev": "sass --watch styles/scss/global.scss styles/css/global.css"
+    "dev": "sass --watch styles/scss/:styles/css/"
   }
 }

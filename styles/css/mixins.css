@@ -1,6 +1,9 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&amp;display=swap");
 * {
   margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   padding: 0;
   content: "";
   font-family: "Noto Serif JP", sans-serif;
@@ -49,29 +52,6 @@ main {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
-
-.btn, .btn--error, .btn--warning, .btn--info, .btn--success {
-  min-width: 200px;
-  padding: 1rem 2rem;
-  margin: 1rem auto;
-  background-color: transparent;
-}
-.btn--success {
-  border: 1px solid #00a724;
-  color: #00a724;
-}
-.btn--info {
-  border: 1px solid #00fad9;
-  color: #00fad9;
-}
-.btn--warning {
-  border: 1px solid #ff9d09;
-  color: #ff9d09;
-}
-.btn--error {
-  border: 1px solid #ff1414;
-  color: #ff1414;
 }
 
 .card, .card--success {
@@ -140,4 +120,52 @@ main {
   user-select: none;
 }
 
-/*# sourceMappingURL=global.css.map */
+a {
+  color: #ff9d09;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin: 1rem;
+}
+a:hover {
+  color: #3cad57;
+}
+
+.learn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.news {
+  padding: 0 2rem;
+  background-color: #f2ece4;
+  color: #036;
+}
+body.dark .news {
+  background-color: #a0a0a0;
+  color: #d2e1dd;
+  font-size: 2rem;
+}
+.news__title {
+  margin: 1rem 0;
+}
+.news__contents {
+  text-indent: 2rem;
+}
+.news__contents > p:last-child {
+  margin-bottom: 2rem;
+}
+
+.toggle {
+  padding: 3rem;
+}
+.toggle > button {
+  min-width: 300px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=mixins.css.map */
