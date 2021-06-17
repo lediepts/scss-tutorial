@@ -1,0 +1,49 @@
+@import "./constant";
+@import "./mixin";
+* {
+  margin: 0;
+  padding: 0;
+  content: "";
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+  &::selection {
+    background-color: #3cad57;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+  }
+}
+html {
+  font-size: $baseSize;
+}
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  @include tablet {
+    margin: 0 1rem;
+  }
+  @include mobile {
+    margin: 0 0.4rem;
+  }
+}
+main {
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 2.2rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+@import "theme";

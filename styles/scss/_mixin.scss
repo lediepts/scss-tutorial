@@ -1,0 +1,21 @@
+@mixin mobile {
+  @media (max-width: $mobile_width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet_width) {
+    @content;
+  }
+}
+
+@mixin theme-colors($color) {
+  background-color: $light-background;
+  color: $color;
+  body.dark & {
+    background-color: $dark-background;
+    // color: $dark-text;
+    color: invert($color);
+  }
+}

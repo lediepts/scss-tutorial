@@ -1,0 +1,12 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "learn scss",
+  "main": "index.js",
+  "author": "diep.le@0004s.com",
+  "license": "MIT",
+  "private": "true",
+  "scripts": {
+    "dev": "sass --watch styles/scss/global.scss styles/css/global.css"
+  }
+}

@@ -1,0 +1,101 @@
+.btn {
+  min-width: 200px;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  background-color: transparent;
+  &--success {
+    @extend .btn;
+    border: 1px solid $color-success;
+    color: $color-success;
+  }
+  &--info {
+    @extend .btn;
+    border: 1px solid $color-info;
+    color: $color-info;
+  }
+  &--warning {
+    @extend .btn;
+    border: 1px solid $color-warning;
+    color: $color-warning;
+  }
+  &--error {
+    @extend .btn;
+    border: 1px solid $color-error;
+    color: $color-error;
+  }
+}
+
+.card {
+  border: 1px solid $color-black;
+  padding: 1rem;
+  flex-flow: column;
+  min-width: 300px;
+  margin: 1rem auto;
+  &__title {
+    text-transform: capitalize;
+  }
+  &__content {
+    text-indent: 1rem;
+    text-transform: capitalize;
+  }
+  &--success {
+    @extend .card;
+    border: 1px solid $color-success;
+    color: $color-success;
+  }
+}
+
+.notice {
+  position: fixed;
+  top: 0;
+  left: 50vw;
+  z-index: 999;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: $color-white;
+  box-shadow: 1px 2px 10px rgba($color: #000000, $alpha: 0.2);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  &__icon {
+    $size: $baseSize * 3;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    margin-right: 1rem;
+    &--check {
+      @extend .notice__icon;
+      &::after {
+        content: "✔";
+      }
+    }
+    &--bad {
+      @extend .notice__icon;
+      &::after {
+        content: "✘";
+      }
+    }
+  }
+  &__text {
+    min-width: 200px;
+    max-width: 600px;
+  }
+  &--success {
+    @extend .notice;
+    background-color: $color-success;
+    color: $color-white;
+  }
+}
+
+.can-not-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
