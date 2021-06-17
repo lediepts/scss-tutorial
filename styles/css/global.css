@@ -4,9 +4,8 @@
   padding: 0;
   content: "";
   font-family: "Noto Serif JP", sans-serif;
-  font-size: 1.6rem;
   box-sizing: border-box;
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
 }
 *::selection {
   background-color: #3cad57;
@@ -17,9 +16,20 @@
 html {
   font-size: 10px;
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 8px;
+  }
+}
 
 body {
   max-width: 1200px;
+  font-size: 1.6rem;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
@@ -39,22 +49,6 @@ main {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
-
-h1 {
-  font-size: 2.4rem;
-}
-
-h2 {
-  font-size: 2.2rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-h4 {
-  font-size: 1.8rem;
 }
 
 .btn, .btn--error, .btn--warning, .btn--info, .btn--success {
