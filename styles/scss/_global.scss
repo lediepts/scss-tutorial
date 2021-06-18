@@ -35,6 +35,8 @@ body {
   @include mobile {
     margin: 0 0.4rem;
   }
+  background-color: $color-black;
+  color: $color-white;
 }
 main {
   width: 80vw;

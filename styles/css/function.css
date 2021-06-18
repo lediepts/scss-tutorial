@@ -141,18 +141,50 @@ a:hover {
   min-height: 50vh;
 }
 
-body {
-  font-family: "Noto Serif JP", sans-serif;
-  color: #cc8b00;
-}
-
-div {
+.level4, .level3, .level2, .level1 {
   margin: 1rem;
+  padding: 1rem;
+  position: relative;
 }
 
-.alert {
-  border: 1px solid rgba(35, 0, 190, 0.88);
-  color: #2300be;
+.level1 {
+  background: radial-gradient(#be816f, rgba(191, 194, 247, 0.0862646266));
+  width: 100%;
+}
+.level1::after {
+  content: "100%";
+  position: absolute;
+  left: 100%;
 }
 
-/*# sourceMappingURL=variavles.css.map */
+.level2 {
+  background: radial-gradient(#c06712, rgba(89, 52, 155, 0.756834079));
+  width: 50%;
+}
+.level2::after {
+  content: "50%";
+  position: absolute;
+  left: 100%;
+}
+
+.level3 {
+  background: radial-gradient(#748a6e, rgba(240, 12, 116, 0.1545734849));
+  width: 25%;
+}
+.level3::after {
+  content: "25%";
+  position: absolute;
+  left: 100%;
+}
+
+.level4 {
+  background: radial-gradient(#58f45b, rgba(32, 165, 4, 0.6982972719));
+  width: 12.5%;
+}
+.level4::after {
+  content: "12.5%";
+  position: absolute;
+  left: 100%;
+}
+
+/*# sourceMappingURL=function.css.map */

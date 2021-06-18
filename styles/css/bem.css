@@ -141,18 +141,68 @@ a:hover {
   min-height: 50vh;
 }
 
-body {
-  font-family: "Noto Serif JP", sans-serif;
-  color: #cc8b00;
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  margin: 2rem auto;
+}
+.form__head {
+  background-color: #ff9d09;
+  padding: 1rem;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.form__body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.form__body > div {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.form__body > div:not(:last-child) > :first-child {
+  flex-basis: 20%;
+}
+.form__body > div:not(:last-child) > :last-child {
+  flex-basis: 80%;
+}
+.form__body > div:last-child {
+  justify-content: center;
+}
+.form__body > div:last-child > :first-child {
+  margin-right: 0.5rem;
+}
+.form__action {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-div {
-  margin: 1rem;
+.btn, .btn--login, .btn--reset {
+  padding: 0.5rem 2rem;
+  border: none;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.btn:hover, .btn--login:hover, .btn--reset:hover {
+  transform: translateY(3px);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.btn--reset {
+  background-color: #ff9d09;
+  color: #ffffff;
+}
+.btn--login {
+  background-color: #00a724;
+  color: #ffffff;
 }
 
-.alert {
-  border: 1px solid rgba(35, 0, 190, 0.88);
-  color: #2300be;
-}
-
-/*# sourceMappingURL=variavles.css.map */
+/*# sourceMappingURL=bem.css.map */

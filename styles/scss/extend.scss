@@ -1,0 +1,36 @@
+@import "global";
+
+%message {
+  border: 1px solid #fff;
+  color: rgb(253, 255, 134);
+  margin: 1rem;
+  padding: 1rem 4rem;
+}
+.default {
+  @extend %message;
+  color: #fff;
+}
+
+.error {
+  @extend %message;
+  color: $color-error;
+  border: 2px dotted $color-error;
+  border-radius: 1rem;
+}
+
+.check {
+  @extend .default;
+  color: $color-success;
+  border-color: $color-success;
+  &::before {
+    content: "✔";
+  }
+}
+.bad {
+  @extend .error;
+  border-color: $color-warning;
+  color: $color-warning;
+  &::before {
+    content: "✘";
+  }
+}

@@ -1,0 +1,64 @@
+@import "global";
+
+$haftLevel: 2;
+
+@function haft($number) {
+  $val: 100%;
+  @for $i from 1 to $number {
+    $val: $val / $haftLevel;
+  }
+  @return $val;
+}
+@function randomColor() {
+  @return radial-gradient(
+    rgb(random(255), random(255), random(255)),
+    rgba(random(255), random(255), random(255), random())
+  );
+}
+
+%base {
+  margin: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.level1 {
+  background: randomColor();
+  @extend %base;
+  width: haft(1);
+  &::after {
+    content: haft(1) + "";
+    position: absolute;
+    left: 100%;
+  }
+}
+.level2 {
+  background: randomColor();
+  @extend %base;
+  width: haft(2);
+  &::after {
+    content: haft(2) + "";
+    position: absolute;
+    left: 100%;
+  }
+}
+.level3 {
+  background: randomColor();
+  @extend %base;
+  width: haft(3);
+  &::after {
+    content: haft(3) + "";
+    position: absolute;
+    left: 100%;
+  }
+}
+.level4 {
+  background: randomColor();
+  @extend %base;
+  width: haft(4);
+  &::after {
+    content: haft(4) + "";
+    position: absolute;
+    left: 100%;
+  }
+}

@@ -34,6 +34,8 @@ body {
   max-width: 1200px;
   font-size: 1.6rem;
   margin: 0 auto;
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 @media (max-width: 768px) {
   body {

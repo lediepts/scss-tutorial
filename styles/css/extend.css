@@ -141,18 +141,37 @@ a:hover {
   min-height: 50vh;
 }
 
-body {
-  font-family: "Noto Serif JP", sans-serif;
-  color: #cc8b00;
-}
-
-div {
+.error, .bad, .default, .check {
+  border: 1px solid #fff;
+  color: #fdff86;
   margin: 1rem;
+  padding: 1rem 4rem;
 }
 
-.alert {
-  border: 1px solid rgba(35, 0, 190, 0.88);
-  color: #2300be;
+.default, .check {
+  color: #fff;
 }
 
-/*# sourceMappingURL=variavles.css.map */
+.error, .bad {
+  color: #ff1414;
+  border: 2px dotted #ff1414;
+  border-radius: 1rem;
+}
+
+.check {
+  color: #00a724;
+  border-color: #00a724;
+}
+.check::before {
+  content: "✔";
+}
+
+.bad {
+  border-color: #ff9d09;
+  color: #ff9d09;
+}
+.bad::before {
+  content: "✘";
+}
+
+/*# sourceMappingURL=extend.css.map */
