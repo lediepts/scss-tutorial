@@ -122,6 +122,48 @@ main {
   user-select: none;
 }
 
+.g-btn {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.g-btn:hover {
+  background-color: #00a724;
+  color: #ffffff;
+}
+.g-btn:active {
+  border: 4px dotted #00a724;
+}
+.g-btn:focus {
+  background-color: #ff1414;
+  color: #ffffff;
+}
+.g-btn::after {
+  content: "✎";
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border: 1px solid #1a1a1a;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+.g-btn::before {
+  content: "☏";
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border: 1px solid #1a1a1a;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
 a {
   color: #ff9d09;
   text-decoration: none;

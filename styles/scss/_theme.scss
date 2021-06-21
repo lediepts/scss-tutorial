@@ -72,3 +72,46 @@
   -ms-user-select: none;
   user-select: none;
 }
+.g-btn {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: $color-white;
+  color: $color-black;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  &:hover {
+    background-color: $color-success;
+    color: $color-white;
+  }
+  &:active {
+    border: 4px dotted $color-success;
+  }
+  &:focus {
+    background-color: $color-error;
+    color: $color-white;
+  }
+  &::after {
+    content: "✎";
+    $size: 3rem;
+    width: $size;
+    height: $size;
+    text-align: center;
+    border: 1px solid $color-black;
+    border-radius: $border-radius;
+    margin-left: 1rem;
+  }
+  &::before {
+    content: "☏";
+    $size: 3rem;
+    width: $size;
+    height: $size;
+    text-align: center;
+    border: 1px solid $color-black;
+    border-radius: $border-radius;
+    margin-right: 1rem;
+  }
+}

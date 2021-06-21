@@ -36,11 +36,109 @@ body {
 }
 ```
 
+## Pseudo-Selector （疑似ーぎじ）
+
+- Pseudo-classes:
+
+```scss:
+.g-btn {
+  // scss
+  padding: 1rem 2rem;
+  border: none;
+  background-color: $color-white;
+  color: $color-black;
+  &:hover {
+    background-color: $color-success;
+    color: $color-white;
+  }
+  &:active {
+    border: 4px dotted $color-success;
+  }
+  &:focus {
+    background-color: $color-error;
+    color: $color-white;
+  }
+}
+
+```
+
+```css:
+// css
+.g-btn {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.g-btn:hover {
+  background-color: #00a724;
+  color: #ffffff;
+}
+.g-btn:active {
+  border: 4px dotted #00a724;
+}
+.g-btn:focus {
+  background-color: #ff1414;
+  color: #ffffff;
+}
+```
+
+- Pseudo-elements:
+
+```scss:
+// scss
+.g-btn {
+  &::after {
+    content: "✎";
+    $size: 3rem;
+    width: $size;
+    height: $size;
+    text-align: center;
+    border: 1px solid $color-black;
+    border-radius: $border-radius;
+    margin-left: 1rem;
+  }
+  &::before {
+    content: "☏";
+    $size: 3rem;
+    width: $size;
+    height: $size;
+    text-align: center;
+    border: 1px solid $color-black;
+    border-radius: $border-radius;
+    margin-right: 1rem;
+  }
+}
+```
+
+```css:
+// css
+.g-btn::after {
+  content: "✎";
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border: 1px solid #1a1a1a;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+.g-btn::before {
+  content: "☏";
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border: 1px solid #1a1a1a;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+```
+
 ## Nesting
 
 - SCSS
 
-```css:
+```scss:
+// scss
 nav {
   ul {
     margin: 0;
@@ -61,6 +159,7 @@ nav {
 - CSS
 
 ```css:
+// css
 nav ul {
   margin: 0;
   padding: 0;

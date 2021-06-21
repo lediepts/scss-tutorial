@@ -122,6 +122,48 @@ main {
   user-select: none;
 }
 
+.g-btn {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.g-btn:hover {
+  background-color: #00a724;
+  color: #ffffff;
+}
+.g-btn:active {
+  border: 4px dotted #00a724;
+}
+.g-btn:focus {
+  background-color: #ff1414;
+  color: #ffffff;
+}
+.g-btn::after {
+  content: "✎";
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border: 1px solid #1a1a1a;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+.g-btn::before {
+  content: "☏";
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border: 1px solid #1a1a1a;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
 a {
   color: #ff9d09;
   text-decoration: none;
@@ -148,7 +190,7 @@ a:hover {
 }
 
 .level1 {
-  background: radial-gradient(#be816f, rgba(191, 194, 247, 0.0862646266));
+  background: radial-gradient(#54639f, rgba(38, 137, 188, 0.7976198168));
   width: 100%;
 }
 .level1::after {
@@ -158,7 +200,7 @@ a:hover {
 }
 
 .level2 {
-  background: radial-gradient(#c06712, rgba(89, 52, 155, 0.756834079));
+  background: radial-gradient(#18a187, rgba(223, 101, 103, 0.1214509143));
   width: 50%;
 }
 .level2::after {
@@ -168,7 +210,7 @@ a:hover {
 }
 
 .level3 {
-  background: radial-gradient(#748a6e, rgba(240, 12, 116, 0.1545734849));
+  background: radial-gradient(#fdb84e, rgba(61, 228, 202, 0.6868645561));
   width: 25%;
 }
 .level3::after {
@@ -178,7 +220,7 @@ a:hover {
 }
 
 .level4 {
-  background: radial-gradient(#58f45b, rgba(32, 165, 4, 0.6982972719));
+  background: radial-gradient(#a8dd80, rgba(22, 17, 193, 0.6121045711));
   width: 12.5%;
 }
 .level4::after {

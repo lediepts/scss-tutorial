@@ -1,21 +1,21 @@
 @import "global";
 
 %message {
-  border: 1px solid #fff;
-  color: rgb(253, 255, 134);
+  border: 1px solid $color-white;
+  color: $color-black;
   margin: 1rem;
   padding: 1rem 4rem;
 }
 .default {
   @extend %message;
-  color: #fff;
+  color: rgb(255, 253, 128);
 }
 
 .error {
   @extend %message;
   color: $color-error;
   border: 2px dotted $color-error;
-  border-radius: 1rem;
+  border-radius: $border-radius;
 }
 
 .check {
@@ -33,4 +33,7 @@
   &::before {
     content: "✘";
   }
+}
+.multiple {
+  @extend .check, .bad;
 }
