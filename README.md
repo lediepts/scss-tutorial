@@ -299,3 +299,14 @@ body {
   border-color: yellow;
 }
 ```
+
+## B-E-M
+
+```scss:
+.block {}   /* Block */
+.block__element {}  /* Element */
+.block--modifier {}  /* Block Modifier */
+.block__element--modifier {}  /* Element Modifier */
+```
+
+![B-E-M](./images/bem.jpg)
